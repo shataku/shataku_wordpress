@@ -25,7 +25,44 @@
 // を使用し、必ず UTF-8 の BOM なし (UTF-8N) で保存してください。
 
 // ** MySQL 設定 - この情報はホスティング先から入手してください。 ** //
-/** WordPress のためのデータベース名 */
+if (getenv('WP_ENV') == "development") { 
+	/* for development 開発用のデータベース設定です。*/
+
+    define('DB_NAME', 'shataku');
+  
+    /** MySQL データベースのユーザー名 */
+    define('DB_USER', 'shataku');
+  
+    /** MySQL データベースのパスワード */
+    define('DB_PASSWORD', 'shataku305');
+  
+    /** MySQL のホスト名 */
+    define('DB_HOST', '127.0.0.1:8889');
+  
+    /** データベースのテーブルを作成する際のデータベースの文字セット */
+    define('DB_CHARSET', 'utf8');
+  
+    /** データベースの照合順序 (ほとんどの場合変更する必要はありません) */
+    define('DB_COLLATE', '');
+  
+    /* ローカル開発用 */
+    define('WP_HOME','http://localhost:8888');
+    define('WP_SITEURL','http://localhost:8888');
+    /**
+     * 開発者へ: WordPress デバッグモード
+     *
+     * この値を true にすると、開発中に注意 (notice) を表示します。
+     * テーマおよびプラグインの開発者には、その開発環境においてこの WP_DEBUG を使用することを強く推奨します。
+     *
+     * その他のデバッグに利用できる定数については Codex をご覧ください。
+     *
+     * @link http://wpdocs.osdn.jp/WordPress%E3%81%A7%E3%81%AE%E3%83%87%E3%83%90%E3%83%83%E3%82%B0
+     */
+    define('WP_DEBUG', true);
+
+} else {
+
+/** 公開用のデータベース設定です。　サーバ契約してないので見設定です｡ﾟ(ﾟ´ω`ﾟ)ﾟ｡ */
 define( 'DB_NAME', 'shataku_git' );
 
 /** MySQL データベースのユーザー名 */
@@ -42,6 +79,7 @@ define( 'DB_CHARSET', 'utf8mb4' );
 
 /** データベースの照合順序 (ほとんどの場合変更する必要はありません) */
 define( 'DB_COLLATE', '' );
+}
 
 /**#@+
  * 認証用ユニークキー
