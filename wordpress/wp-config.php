@@ -28,7 +28,7 @@
 if (getenv('WP_ENV') == "development") { 
 	/* for development 開発用のデータベース設定です。*/
 
-    define('DB_NAME', 'shataku');
+    define('DB_NAME', 'shataku_git');
   
     /** MySQL データベースのユーザー名 */
     define('DB_USER', 'shataku');
