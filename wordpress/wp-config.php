@@ -32,7 +32,7 @@ define( 'DB_NAME', 'shataku_git' );
 define( 'DB_USER', 'root' );
 
 /** MySQL データベースのパスワード */
-define( 'DB_PASSWORD', 'Matu8986' );
+define( 'DB_PASSWORD', 'root' );
 
 /** MySQL のホスト名 */
 define( 'DB_HOST', 'localhost' );
