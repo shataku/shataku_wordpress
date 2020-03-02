@@ -31,10 +31,10 @@ if (getenv('WP_ENV') == "development") {
     define('DB_NAME', 'shataku');
   
     /** MySQL データベースのユーザー名 */
-    define('DB_USER', 'root');
+    define('DB_USER', 'shataku');
   
     /** MySQL データベースのパスワード */
-    define('DB_PASSWORD', 'root');
+    define('DB_PASSWORD', 'shataku305');
   
     /** MySQL のホスト名 */
     define('DB_HOST', '127.0.0.1:8889');
